@@ -52,6 +52,10 @@ a {
     color: var(--color-secondary);
 }
 
+a:hover {
+    color: var(--color-tertiary);
+}
+
 nav {
     background-color: transparent;
     transition: background-color 0.5s linear;
@@ -69,6 +73,7 @@ nav a {
     color: var(--color-primary);
     font-size: 1.1rem;
     margin: 0 1rem;
+    font-weight: 500;
     transition: background-color 0.3s linear;
 }
 
@@ -80,6 +85,10 @@ nav.scrolled {
 
 nav.scrolled a {
     color: #000000;
+}
+
+.dropdown {
+    display: none;
 }
 
 #home {
@@ -107,7 +116,7 @@ nav.scrolled a {
 .home-text {
     position: absolute;
     z-index: 2;
-    width: 60%;
+    width: 70%;
     top: 25%;
     left: 15%;
     color: var(--color-primary);
@@ -115,18 +124,18 @@ nav.scrolled a {
 }
 
 .home-text h1 {
-    font-size: 3.5rem;
-    width: 40%;
+    font-size: 3rem;
+    width: 45%;
     font-weight: 600;
     text-transform: capitalize;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 .home-text h5 {
     font-size: 1.5rem;
-    width: 40%;
+    width: 45%;
     font-weight: 400;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .home-text button {
@@ -182,10 +191,11 @@ nav.scrolled a {
 
 .big {
     flex-basis: 28%;
+    padding: 2rem;
 }
 
 .landscape {
-    flex-basis: 50%;
+    flex-basis: 40%;
     height: 10%;
 }
 
@@ -225,8 +235,8 @@ nav.scrolled a {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
     box-sizing: border-box;
     display: inline-block;
-    margin: 5vh 2vw;
-    padding: 3vmin;
+    margin: 5vh 3vw;
+    padding: 2vmin;
     position: relative;
     text-align: center;
 }
@@ -264,6 +274,7 @@ nav.scrolled a {
 
 .testimonials {
     flex-basis: 40%;
+    text-align: justify;
 }
 
 .testimonials h1 {
@@ -284,4 +295,136 @@ nav.scrolled a {
 .carousel-2 img {
     width: 100%;
     height: auto;
+}
+
+@media only screen and (max-width: 425px) {
+    nav {
+        padding: 0.8rem 1rem;
+        justify-content: space-between;
+    }
+
+    nav h2 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        background-color: var(--color-primary);
+        color: var(--color-secondary);
+        border: 1px solid var(--color-secondary);
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--color-primary);
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        float: right;
+        right: 0;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    .show {
+        display: block;
+    }
+
+    .carousel-1 img {
+        height: 100vh;
+        width: auto !important;
+        transform: translate(-20%);
+    }
+
+    .home-text {
+        width: 80%;
+        top: 20%;
+        left: 10%;
+    }
+
+    .home-text h1 {
+        font-size: 2.5rem;
+        width: 90%;
+    }
+
+    .home-text h5 {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+
+    .home-text button {
+        font-size: 1rem;
+    }
+
+    .grid-container {
+        padding: 1rem;
+    }
+
+    .sticky-note {
+        flex-basis: 40%;
+    }
+
+    .big {
+        flex-basis: 80%;
+    }
+
+    .landscape {
+        flex-basis: 80%;
+    }
+
+    .sticky-note p {
+        font-size: 1.5rem;
+    }
+
+    .frame {
+        margin: 2vh 1vw;
+        padding: 2vmin;
+    }
+
+    #testimonials {
+        padding: 1rem;
+    }
+
+    .testimonials {
+        flex-basis: 80%;
+    }
+
+    .testimonials h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-2 {
+        flex-basis: 100%;
+    }
 }
