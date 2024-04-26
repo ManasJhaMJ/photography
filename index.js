@@ -34,6 +34,7 @@ var splide = new Splide('.splide', {
     focus: 'center',
     autoplay: true,
     interval: 1500,
+    lazyLoad: 'false',
     autoWidth: true,
 });
 
