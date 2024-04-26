@@ -1,17 +1,16 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Reenie+Beanie&display=swap');
 
+/* Setting CSS Variables for Theme */
 :root {
     --color-primary: #f9f9f9;
     --color-secondary: #000000;
     --color-tertiary: #525252;
 }
 
+/* Setting everything to Layer 1 to avoid overlapping with bg  */
 * {
     z-index: 1;
-}
-
-html {
-    background-color: var(--color-primary);
 }
 
 body {
@@ -24,6 +23,7 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Setting sizes */
 h1 {
     font-size: 2.6rem;
 }
@@ -61,6 +61,7 @@ a:hover {
     color: var(--color-tertiary);
 }
 
+/* Navbar Styling */
 nav {
     background-color: transparent;
     transition: background-color 0.5s linear;
@@ -101,6 +102,7 @@ nav.scrolled a:hover {
     display: none;
 }
 
+/* Carousel Styling */
 #home {
     height: 100vh;
     position: relative;
@@ -171,6 +173,7 @@ nav.scrolled a:hover {
     color: var(--color-primary);
 }
 
+/* Grid Styling */
 .grid-container {
     display: flex;
     flex-wrap: wrap;
@@ -280,6 +283,7 @@ nav.scrolled a:hover {
     top: -2.5vmin;
 }
 
+/* Testimonials Styling */
 #testimonials {
     padding: 2rem;
     margin-top: 5rem;
@@ -316,6 +320,7 @@ nav.scrolled a:hover {
     height: auto;
 }
 
+/* Full Section styling */
 #full {
     position: relative;
     width: 100%;
@@ -342,6 +347,7 @@ nav.scrolled a:hover {
     text-align: center;
 }
 
+/* Text Only Section Styling */
 #text-only {
     padding: 2rem;
     display: flex;
@@ -379,6 +385,7 @@ nav.scrolled a:hover {
     color: var(--color-secondary);
 }
 
+/* Projects Section Styling */
 #projects {
     margin: 7rem 0;
     padding: 2rem;
@@ -390,6 +397,7 @@ nav.scrolled a:hover {
     padding: 0 2rem;
 }
 
+/* Quote Section Styling */
 #quote {
     padding: 5rem 3rem;
     display: flex;
@@ -415,6 +423,7 @@ nav.scrolled a:hover {
     font-family: 'Merriweather', cursive;
 }
 
+/* Contact Section Styling */
 #contact {
     padding: 5rem 2rem;
     display: flex;
@@ -438,7 +447,8 @@ nav.scrolled a:hover {
     font-size: 3rem;
     font-weight: 600;
     font-family: 'Reenie Beanie', sans-serif;
-    padding-bottom: 2rem;
+    padding: 2rem 0;
+
 }
 
 .contact-text p {
@@ -495,6 +505,7 @@ nav.scrolled a:hover {
     color: var(--color-secondary);
 }
 
+/* Footer Styling */
 footer {
     margin: 0 4rem;
     margin-top: 8rem;
@@ -508,7 +519,7 @@ footer {
 }
 
 
-/* CSS for Mobile Screen Sizes */
+/* ------------------CSS for Mobile Screen Sizes ------------------*/
 @media only screen and (max-width: 425px) {
     nav {
         padding: 0.8rem 1rem;
@@ -524,6 +535,7 @@ footer {
         display: none;
     }
 
+    /* Dropdown Styling for Navbar */
     .dropdown {
         position: relative;
         display: inline-block;
@@ -568,7 +580,7 @@ footer {
         background-color: #ddd;
     }
 
-    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+    /* Show the dropdown menu */
     .show {
         display: block;
     }
@@ -587,7 +599,7 @@ footer {
     }
 
     .home-text {
-        width: 80%;
+        width: 70%;
         top: 20%;
         left: 15%;
     }
@@ -600,6 +612,7 @@ footer {
     .home-text h5 {
         font-size: 1.1rem;
         width: 90%;
+        padding-bottom: 2rem;
     }
 
     .home-text button {
@@ -649,6 +662,10 @@ footer {
         flex-basis: 100%;
     }
 
+    #full {
+        width: 100vw;
+    }
+
     #full h1 {
         font-size: 3rem;
     }
@@ -656,6 +673,7 @@ footer {
     #full img {
         height: 100vh;
         width: 100%;
+        object-fit: cover;
     }
 
     #text-only h2 {
@@ -664,8 +682,13 @@ footer {
     }
 
     #text-only p {
+        padding: 0.7rem;
         width: 100%;
         text-align: justify;
+    }
+
+    #projects {
+        padding: 1rem;
     }
 
     #quote h1 {

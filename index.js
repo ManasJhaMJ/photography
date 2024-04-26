@@ -8,7 +8,7 @@ window.onscroll = function () {
     }
 }
 
-// Button toggler
+// NavButton toggler
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -27,7 +27,7 @@ window.onclick = function (event) {
     }
 }
 
-// Splide
+// Splide Carousel
 var splide = new Splide('.splide', {
     type: 'loop',
     height: '50vh',
