@@ -17,6 +17,7 @@ html {
 body {
     font-family: 'Montserrat', serif;
     color: var(--color-secondary);
+    background-color: var(--color-primary);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
