@@ -6,6 +6,10 @@
     --color-tertiary: #525252;
 }
 
+* {
+    z-index: 1;
+}
+
 html {
     background-color: var(--color-primary);
 }
@@ -80,11 +84,16 @@ nav a {
 nav.scrolled {
     background-color: var(--color-primary);
     transition: background-color 0.5s linear;
-    color: #000000;
+    color: var(--color-secondary);
 }
 
 nav.scrolled a {
-    color: #000000;
+    color: var(--color-secondary);
+}
+
+nav.scrolled a:hover {
+    color: var(--color-tertiary);
+    text-decoration: underline;
 }
 
 .dropdown {
@@ -113,6 +122,13 @@ nav.scrolled a {
     width: 80px;
 }
 
+.camera img {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
 .home-text {
     position: absolute;
     z-index: 2;
@@ -120,7 +136,6 @@ nav.scrolled a {
     top: 25%;
     left: 15%;
     color: var(--color-primary);
-    font-family: 'Merriweather', serif;
 }
 
 .home-text h1 {
@@ -129,6 +144,7 @@ nav.scrolled a {
     font-weight: 600;
     text-transform: capitalize;
     padding-bottom: 1.5rem;
+    font-family: 'Merriweather', serif;
 }
 
 .home-text h5 {
@@ -281,7 +297,9 @@ nav.scrolled a {
     font-size: 2.5rem;
     font-weight: 600;
     padding-bottom: 2rem;
+    font-family: 'Merriweather', serif;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .carousel-2 {
@@ -295,6 +313,80 @@ nav.scrolled a {
 .carousel-2 img {
     width: 100%;
     height: auto;
+}
+
+#full {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 10rem 0;
+}
+
+#full img {
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+
+#full h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-primary);
+    font-size: 4rem;
+    font-family: 'Reenie Beanie', sans-serif;
+    font-weight: 600;
+    width: max-content;
+    text-align: center;
+}
+
+#text-only {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#text-only h2 {
+    padding: 2rem 0;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+}
+
+#text-only p {
+    padding: 2rem;
+    margin-bottom: 4rem;
+    width: 50%;
+    text-align: center;
+}
+
+#text-only button {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-secondary);
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#text-only button:hover {
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+#projects {
+    margin: 7rem 0;
+    padding: 2rem;
+}
+
+#projects img {
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
 }
 
 @media only screen and (max-width: 425px) {
@@ -367,24 +459,32 @@ nav.scrolled a {
         transform: translate(-20%);
     }
 
+    .camera img {
+        position: fixed;
+        height: 100vh;
+        width: auto;
+        z-index: 0;
+    }
+
     .home-text {
         width: 80%;
         top: 20%;
-        left: 10%;
+        left: 15%;
     }
 
     .home-text h1 {
-        font-size: 2.5rem;
-        width: 90%;
+        font-size: 2.2rem;
+        width: 80%;
     }
 
     .home-text h5 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         width: 90%;
     }
 
     .home-text button {
         font-size: 1rem;
+        padding: 0.8rem 1.5rem;
     }
 
     .grid-container {
@@ -393,6 +493,7 @@ nav.scrolled a {
 
     .sticky-note {
         flex-basis: 40%;
+        padding: 0.6rem;
     }
 
     .big {
@@ -426,5 +527,24 @@ nav.scrolled a {
 
     .carousel-2 {
         flex-basis: 100%;
+    }
+
+    #full h1 {
+        font-size: 3rem;
+    }
+
+    #full img {
+        height: 100vh;
+        width: 100%;
+    }
+
+    #text-only h2 {
+        font-size: 2rem;
+        padding-bottom: 0;
+    }
+
+    #text-only p {
+        width: 100%;
+        text-align: justify;
     }
 }
