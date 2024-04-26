@@ -389,6 +389,125 @@ nav.scrolled a:hover {
     padding: 0 2rem;
 }
 
+#quote {
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#quote h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    width: 50%;
+    padding-bottom: 2rem;
+    font-family: 'Reenie Beanie', sans-serif;
+    text-emphasis: italic;
+    text-align: center;
+}
+
+#quote p {
+    font-size: 1.5rem;
+    width: 80%;
+    font-weight: 200;
+    text-align: center;
+    font-family: 'Merriweather', cursive;
+}
+
+#contact {
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contact-text {
+    flex-basis: 40%;
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 3rem 0;
+    position: relative;
+}
+
+.contact-text h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'Reenie Beanie', sans-serif;
+    padding-bottom: 2rem;
+}
+
+.contact-text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#contact img {
+    position: absolute;
+    bottom: -10%;
+    right: -5%;
+    width: 20%;
+    height: auto;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: 40%;
+}
+
+#contact form h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Reenie Beanie', sans-serif;
+    padding-bottom: 2rem;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid var(--color-secondary);
+    border-radius: 5px;
+}
+
+#contact form button {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#contact form button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+footer {
+    margin: 0 4rem;
+    margin-top: 8rem;
+    color: var(--color-tertiary);
+    background-color: var(--color-primary);
+    border-top: var(--color-tertiary) 1px solid;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* CSS for Mobile Screen Sizes */
 @media only screen and (max-width: 425px) {
     nav {
         padding: 0.8rem 1rem;
@@ -547,4 +666,47 @@ nav.scrolled a:hover {
         width: 100%;
         text-align: justify;
     }
+
+    #quote h1 {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    #quote p {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+
+    #contact {
+        padding: 1rem;
+    }
+
+    .contact-text {
+        flex-basis: 90%;
+        padding: 1rem;
+    }
+
+    .contact-text p {
+        font-size: 1rem;
+    }
+
+    #contact img {
+        width: 30%;
+    }
+
+    #contact form {
+        flex-basis: 90%;
+        align-items: center;
+    }
+
+    #contact form h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        width: 90%;
+    }
+
 }
