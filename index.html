@@ -82,8 +82,8 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <div class="home-text">
-            <h1>Photography for the heart & memories for the soul.</h1>
+        <div class="home-text" data-entrance="from-left">
+            <h1 id="typed">Photography for the heart & memories for the soul.</h1>
             <h5>It remembers little things, long after you have forgotten everything.</h5>
             <button>See more</button>
         </div>
@@ -92,33 +92,33 @@
     <!-- Grid -->
     <section id="grid">
         <div class="grid-container">
-            <div class="sticky-note one">
+            <div class="sticky-note one" data-entrance="from-left">
                 <p>Paris, France</p>
                 <img src="./assets/images/paris.png" alt="image">
             </div>
-            <div class="sticky-note two">
+            <div class="sticky-note two" data-entrance="from-left" data-entrance-delay="500">
                 <p>Hawaii, USA</p>
                 <img src="./assets/images/USA.png" alt="image">
             </div>
-            <div class="landscape frame">
+            <div class="landscape frame" data-entrance="from-bottom">
                 <img src="./assets/images/landscape1.jpg" alt="image">
             </div>
-            <div class="sticky-note big three">
+            <div class="sticky-note big three" data-entrance="from-left">
                 <p>Seoul, Japan</p>
                 <img src="./assets/images/japan.png" alt="image">
             </div>
-            <div class="sticky-note big one">
+            <div class="sticky-note big one" data-entrance="from-left" data-entrance-delay="500">
                 <p>Altai, Russia</p>
                 <img src="./assets/images/Russia.png" alt="image">
             </div>
-            <div class="landscape frame">
+            <div class="landscape frame" data-entrance="from-bottom">
                 <img src="./assets/images/landscape2.jpg" alt="image">
             </div>
-            <div class="sticky-note two">
+            <div class="sticky-note two" data-entrance="from-left">
                 <p>Dubai, UAE</p>
                 <img src="./assets/images/UAE.png" alt="image">
             </div>
-            <div class="sticky-note three">
+            <div class="sticky-note three" data-entrance="from-left" data-entrance-delay="500">
                 <p>London, England</p>
                 <img src="./assets/images/london.png" alt="image">
             </div>
@@ -127,7 +127,7 @@
 
     <!-- Testimonials -->
     <section id="testimonials">
-        <div class="testimonials">
+        <div class="testimonials" data-entrance="from-left">
             <h1>Testimonials</h1>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident ea optio nemo ex ut dolores
@@ -138,7 +138,8 @@
                 laudantium sapiente, laboriosam excepturi.
             </p>
         </div>
-        <div id="carouselExampleControls" class="carousel carousel-2 slide" data-bs-ride="carousel">
+        <div data-entrance="from-left" id="carouselExampleControls" class="carousel carousel-2 slide"
+            data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="./assets/images/6.jpg" class="d-block w-100" alt="...">
@@ -172,15 +173,15 @@
 
     <!-- Text Only -->
     <section id="text-only">
-        <h2>Pacific Northwest or Anywhere Beyond</h2>
-        <p>
+        <h2 data-entrance="from-left">Pacific Northwest or Anywhere Beyond</h2>
+        <p data-entrance="from-bottom">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quas placeat itaque minus dolorem ducimus,
             debitis porro alias provident qui cupiditate, eveniet exercitationem cumque expedita et quis unde mollitia.
             Labore.
             Amet nihil in iusto numquam autem inventore saepe, possimus qui sit eos, vitae, deserunt eius maiores hic
             sequi doloremque aliquam debitis! Sequi alias in, totam eos id eaque a ipsam.
         </p>
-        <button>Read More</button>
+        <button data-entrance="from-left">Read More</button>
     </section>
 
     <!-- Projects -->
@@ -209,7 +210,7 @@
     </section>
 
     <!-- Quote -->
-    <section id="quote">
+    <section id="quote" data-entrance="fade" data-entrance-delay="1000">
         <h1>
             "Photography is a way of feeling, of touching, of loving. What you have caught on film is captured
             forever... It remembers little things, long after you have forgotten everything."
@@ -221,14 +222,14 @@
 
     <!-- Contact -->
     <section id="contact">
-        <form action="">
+        <form action="" data-entrance="from-left">
             <h1>Feedback Form</h1>
             <input type="text" placeholder="Name">
             <input type="email" placeholder="Email">
             <textarea name="" id="" cols="50" rows="1" placeholder="Message"></textarea>
             <button>Send</button>
         </form>
-        <div class="contact-text">
+        <div class="contact-text" data-entrance="from-left" data-entrance-delay="1000">
             <h1>Contact Me</h1>
             <p>
                 Phone : 123-456-7890 <br><br>
@@ -259,6 +260,12 @@
 
     <!-- Splide CDN-->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <!-- Typed.js CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Scroll Entrance CDN-->
+    <script src="./assets/scroll-entrance-master/src/scroll-entrance.js"></script>
 
     <!-- JS -->
     <script src="./index.js"></script>

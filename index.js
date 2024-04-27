@@ -39,3 +39,9 @@ var splide = new Splide('.splide', {
 });
 
 splide.mount(window.splide.Extensions);
+
+// typed.js
+var typed = new Typed('#typed', {
+    strings: ['', 'Photography for the heart and memories for the soul.'],
+    typeSpeed: 55,
+});
