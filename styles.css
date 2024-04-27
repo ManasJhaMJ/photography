@@ -283,6 +283,17 @@ nav.scrolled a:hover {
     top: -2.5vmin;
 }
 
+.row {
+    margin: 10rem 0;
+    padding: 1rem 3rem;
+}
+
+.row div {
+    font-size: 2.5rem;
+    font-family: 'Reenie Beanie', sans-serif;
+    margin: 1rem 0;
+}
+
 /* Testimonials Styling */
 #testimonials {
     padding: 2rem;
@@ -600,7 +611,7 @@ footer {
 
     .home-text {
         width: 70%;
-        top: 20%;
+        top: 18%;
         left: 15%;
     }
 
@@ -644,6 +655,10 @@ footer {
     .frame {
         margin: 2vh 1vw;
         padding: 2vmin;
+    }
+
+    .row div {
+        font-size: 2rem;
     }
 
     #testimonials {
@@ -733,4 +748,15 @@ footer {
         width: 90%;
     }
 
+}
+
+@media only screen and (min-width:768px) and (max-width: 1024px) {
+    .home-text {
+        top: 15%;
+    }
+
+    .carousel-1 img {
+        height: 100vh;
+        width: auto;
+    }
 }
